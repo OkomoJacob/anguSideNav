@@ -22,6 +22,5 @@ RUN echo $(ls -a /sidenav/)
 FROM nginx:latest
 COPY --from=builder /sidenav/dist/sidenav/ /usr/share/nginx/html
 
-
 # Build image in terminal: sudo docker build . -t repo/sitory
 # Spin container in terminal: sudo docker run -p 3000:80 repo/sitory
