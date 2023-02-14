@@ -1,15 +1,22 @@
 import { navBarData } from './nav-data';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent {
   collapsed = true;
   navbarData = navBarData
   constructor() {}
 
-  ngOnInit(): void {}
+  @Output() 
+  toggleCollapse(): void{
+    this.collapsed = !this.collapsed;
+  }
+
+  closeSideNav(): void{
+    this.collapsed = false;
+  }
 }
