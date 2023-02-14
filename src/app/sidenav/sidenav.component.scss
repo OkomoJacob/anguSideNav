@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  width: 12rem;
+  width: 6rem;
   height: 100vh;
   box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
 
@@ -74,7 +74,8 @@
       height: 3rem;
       color: #f3f3f3;
       text-decoration: none;
-      transform: color 0.3s ease;
+      transition: all 0.5s ease;
+      border-radius: 0.625rem;
 
       .sidenav-link-icon{
         font-size: 22px;
@@ -86,6 +87,13 @@
       .sidenav-link-text{
         margin-left: 1.5rem;
       }
+    }
+  }
+  .sidenav-nav-item:hover{
+    border-radius: 10;
+    .sidenav-nav-link{
+        background-color: #fff;
+        color: #000;
     }
   }
 }
