@@ -1,3 +1,5 @@
+import { SettingsComponent } from './settings/settings.component';
+import { ProductsComponent } from './products/products.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CouponsComponent } from './coupons/coupons.component';
 import { PagesComponent } from './pages/pages.component';
@@ -9,11 +11,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'products', component: products},
+  {path: 'products', component: ProductsComponent},
   {path: 'statistics', component: StatisticsComponent},
   {path: 'coupens', component: CouponsComponent},
   {path: 'pages', component: PagesComponent},
-  {path: 'media', component: MediaComponent}
+  {path: 'media', component: MediaComponent},
+  {path: 'settings', component: SettingsComponent}
 ];
 
 @NgModule({
