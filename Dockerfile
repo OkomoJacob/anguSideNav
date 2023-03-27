@@ -22,5 +22,8 @@ RUN echo $(ls -a /sidenav/)
 FROM nginx:latest
 COPY --from=builder /sidenav/dist/sidenav/ /usr/share/nginx/html
 
+# On init, start the Nginx webserver in foreground and keep the cont running.
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
 # Build image in terminal: sudo docker build . -t repo/sitory
 # Spin container in terminal: sudo docker run -p 3000:80 repo/sitory
